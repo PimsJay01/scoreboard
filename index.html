@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <header>
+        <title>Scoreboard GAB</title>
+        <meta charset="utf-8">
+        <!--<script src="http://localhost:7777/socket.io/socket.io.js"></script>-->
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- production version, optimized for size and speed -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+    <div class="title wrapper">
+        <div>Groupement Autonome de Basket</div>
+    </div>
+    <div class="wrapper">
+        <div class="scores score-a">
+            <div v-on:click="down" class="title">Team A</div>
+            <div v-on:click="up" class="score digital">{{ count }}</div>
+        </div>
+        <div class="scores score-b">
+            <div v-on:click="down" class="title">Team B</div>
+            <div v-on:click="up" class="score digital">{{ count }}</div>
+        </div>
+    </div>
+    <div class="bottom wrapper">
+        <div>
+            <div class="faults-a">
+                <div v-on:click="down" class="title">Fautes</div>
+                <div v-on:click="up" class="value">{{ count }}</div>
+            </div>
+            <div class="to-a">
+                <div v-on:click="down" class="title">T-M</div>
+                <div v-on:click="up" class="value">{{ count }}</div>
+            </div>
+        </div>
+        <div class="time">
+            <div v-on:click="reset" class="title">Time</div>
+            <div v-on:click="startOrPause" class="counter">{{ message }}</div>
+        </div>
+        <div>
+            <div class="faults-b">
+                <div v-on:click="down" class="title">Fautes</div>
+                <div v-on:click="up" class="value">{{ count }}</div>
+            </div>
+            <div class="to-b">
+                <div v-on:click="down" class="title">T-M</div>
+                <div v-on:click="up" class="value">{{ count }}</div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>

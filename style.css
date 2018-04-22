@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Digital';
+    src: url('DigitalDismay.otf') format('truetype');
+}
+body {
+    margin: 0;
+    background-color: black;
+}
+.wrapper {
+    display: flex;
+}
+.wrapper > div {
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    flex-grow: 1;
+}
+.wrapper > div.time {
+    flex-grow: 2;
+}
+.title {
+    height: 8vh;
+    font-size: 5vh;
+}
+.value {
+    height: 12vh;
+    font-size: 10vh;
+}
+.scores {
+    width: 50%;
+    height: 42vh;
+    font-size: 30vh;
+}
+.bottom {
+    height: 42vh;
+    font-size: 30vh;
+}
+.digital, .value, .counter {
+    font-family: 'Digital', sans-serif;
+}
